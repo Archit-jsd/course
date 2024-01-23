@@ -1,0 +1,138 @@
+{% from "yaml-macros.yml" import indented_include %}
+
+title: "Incinerator Quiz"
+
+description: |
+
+    # Incinerator Quiz
+
+rules:
+    start:
+    -
+        if_before: end_week 1
+        if_has_role: [student, ta, instructor]
+        if_has_fewer_sessions_than: 4
+        may_start_new_session: True
+        may_list_existing_sessions: True
+
+    -
+        may_start_new_session: False
+        may_list_existing_sessions: True
+
+    access:
+    -
+        message: "Welcome! This message is brought to you by the access rules."
+        permissions: [view, submit_answer, end_session, see_correctness, see_answer_after_submission]
+
+    grade_identifier: la_quiz
+    grade_aggregation_strategy: use_latest
+
+    grading:
+    -
+        credit_percent: 100
+
+groups:
+-
+    id: intro
+    pages:
+
+    -
+        type: Page
+        id: welcome
+        content: |
+
+            #Welcome to the test quiz for Incinerator!
+
+            Don't be scared.
+
+-
+    id: quiz_start
+    shuffle: False
+    pages:
+    -
+        type: TextQuestion
+        id: power
+        value: 5
+        prompt: |
+
+            # A Power
+
+            How much Power(in kwatts) does an incinerate need to start?
+
+            answers:
+                - type: float
+                value: 2
+    -
+        type: ChoiceQuestion
+        id: partsofincinerator
+        value: 2
+        prompt: |
+
+            # Parts of an incinerator
+
+            which part of Incinerator preevents accidents?
+
+        choices:
+            - ~CORRECT~ Auto power off
+            - Exhaust pipe
+            - Control panel
+            - Frame
+
+
+    -
+        type: MultipleChoiceQuestion
+        id: incineratorloads
+        credit_mode: exact
+        value: 1
+        shuffle: True
+        prompt: |
+
+            #Incinerator loads
+
+            Which of the following are loads for an incinerator?
+
+        choices:
+            - ~CORRECT~ Paper
+            - ~CORRECT~ Cardboard
+            - Diapers
+            - Plastics
+            - ~CORRECT~ Vegitables peels
+
+    -
+        type: MultipleChoiceQuestion
+        id: OPincinerator
+        value: 1
+        shuffle: False
+        credit_mode: proportional
+        prompt: |
+
+            # Operating an Incinerator
+            which of the following are pre-Operation tasks for an incinerator?
+
+        choices:
+            - ~CORRECT~ Pre-heat the incinerator.
+            - Clean the wiremesh.
+            - Load the content for incineration
+            - ~CORRECT~ Check the ease of pulling out the wire mesh.
+            - Ensure that the exhaust pipe has no obstruction.
+
+-
+    id: quiz_tail
+    shuffle: True
+    pages:
+    -
+        type: SurveyTextQuestion
+        id: fear
+        widget: textarea
+        prompt: |
+
+            # Feedback
+
+            How did you like our tranning?
+    -
+         {{ indented_include("questions/lightleader.yml", 8) }}
+
+    completion_text: |
+
+        # See you in class!
+        Thanks for completing the quiz.
