@@ -60,8 +60,6 @@ groups:
             How much Power(in kwatts) does an incinerate need to start?
 
             answers:
-                - type: float
-                    value: 2.0
                 - <plain>Two
     -
         type: ChoiceQuestion
