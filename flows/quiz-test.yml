@@ -50,21 +50,16 @@ groups:
     shuffle: False
     pages:
     -
-        type: TextQuestion
+        type: SurveyTextQuestion
         id: power
         value: 5
+        widget: textarea
         prompt: |
 
             # A Power
 
             How much Power(in kwatts) does an incinerate need to start?
 
-            answers:
-                - type: float
-                    value: 2.0
-                    rtol: 1e-4
-                - <plain>Two
-                - <plain>two
     -
         type: ChoiceQuestion
         id: partsofincinerator
@@ -133,7 +128,7 @@ groups:
 
             How did you like our tranning?
     -
-        type: TextQuestion
+        type: SurveyTextQuestion
         id: quarter
         value: 1
         widget: textarea
