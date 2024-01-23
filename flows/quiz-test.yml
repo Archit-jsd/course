@@ -61,7 +61,10 @@ groups:
 
             answers:
                 - type: float
-                value: 2
+                    value: 2.0
+                    rtol: 1e-4
+                - <plain>two
+                - <plain>Two
     -
         type: ChoiceQuestion
         id: partsofincinerator
@@ -130,7 +133,14 @@ groups:
 
             How did you like our tranning?
     -
-         {{ indented_include("questions/lightleader.yml", 8) }}
+        type: TextQuestion
+        id: quarter
+        value: 1
+        widget: textarea
+        prompt: |
+
+        # Which Company designed and sold this incinerator?
+
 
     completion_text: |
 
