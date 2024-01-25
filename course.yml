@@ -28,11 +28,11 @@ chunks:
         In addition to interactive content, RELATE also supports [static (i.e.
         non-interactive) pages](staticpage:test).
 
-        <img src="repo:images/lightleader.jpeg">
+        <img src="repo:images/lightleader.png">
 
         <div class="well" markdown="1">
              *Incinerator brought to you by* <i class="fa fa-heart"></i>
-            <a href="https://lightleader.in/"><img src="repo:images/lightleader.png"></a>
+            <a href="https://lightleader.in/"><img src="repo:images/lightleader.jpg"></a>
         </div>
 
 -
