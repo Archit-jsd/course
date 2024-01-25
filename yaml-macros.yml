@@ -38,8 +38,3 @@ rules:
       credit_percent: 0
 {%- endmacro %}
 
-{% macro youtube -%}
-  <iframe width="560" height="315" 
-  src="https://www.youtube.com/embed/J2HTEJhns_c?si=jUkA7DFMYglmS2Ez" 
-  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-{%- endmacro %}
