@@ -18,7 +18,7 @@ pages:
     content: |
 
         # Let us understand what an incinerator is
-        {% from "yaml-macros.jinja" import youtube %}
+        {% from "yaml-macros" import youtube %}
         {{ youtube("J2HTEJhns_c?si=MVYq3tCQ-Tpx3QWd") }}
        
 -
