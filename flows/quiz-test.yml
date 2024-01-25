@@ -140,7 +140,7 @@ groups:
         # Which Company designed and sold this incinerator?
 
 
-    completion_text: |
+completion_text: |
 
-        # See you in class!
-        Thanks for completing the quiz.
+     # See you in class!
+    Thanks for completing the quiz.
