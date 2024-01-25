@@ -20,6 +20,7 @@ chunks:
 
         You can also go there using a
         <a href="flow:001-linalg-recap" role="button" class="btn btn-primary">Incinerator Course</a>.
+
         This Course will take approzimate 20 mins to complete.                             
         If you are famillar with the incinerator, you can also jump directly to the [sample quiz](flow:quiz-test).
 
@@ -29,11 +30,8 @@ chunks:
         non-interactive) pages](staticpage:test).
 
         <img src="repo:images/lightleader.png">
-
-        <div class="well" markdown="1">
-             *Incinerator brought to you by* <i class="fa fa-heart"></i>
-            <a href="https://lightleader.in/"><img src="repo:images/lightleader.jpg"></a>
-        </div>
+        (Incinerator brought to you by <img src="repo:images/lightleader1.png">)
+        
 
 -
     title: "Exam pointer"
