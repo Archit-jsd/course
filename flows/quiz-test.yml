@@ -59,7 +59,7 @@ groups:
 
             How much Power(in kwatts) does an incinerate need to start?
 
-            choices:
+        choices:
             - ~CORRECT~ Two
             - Three
             - None of the above
