@@ -50,7 +50,7 @@ groups:
     shuffle: False
     pages:
     -
-        type: TextQuestion
+        type: ChoiceQuestion
         id: power
         value: 5
         prompt: |
@@ -59,8 +59,10 @@ groups:
 
             How much Power(in kwatts) does an incinerate need to start?
 
-            answers:
-                - <plain>Two
+            choices:
+            - ~CORRECT~ Two
+            - Three
+            - None of the above
     -
         type: ChoiceQuestion
         id: partsofincinerator
