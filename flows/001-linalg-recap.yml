@@ -19,7 +19,7 @@ pages:
 
         # Let us understand what an incinerator is
         {% from "yaml-macros.yml" import youtube %}
-        {{ youtube("J2HTEJhns_c?si=7GlFrom9K_1OtvUZ") }}
+        {{ youtube("https://www.youtube.com/embed/J2HTEJhns_c?si=7GlFrom9K_1OtvUZ") }}
        
 -
     type: Page
