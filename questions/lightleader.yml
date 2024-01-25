@@ -1,8 +1,9 @@
 type: TextQuestion
 id: lightleader
 value: 1
-widget: textarea
 prompt: |
 
   # Which Company designed and sold this incinerator?
+answers:
 
+  - <plain>Lightleader
