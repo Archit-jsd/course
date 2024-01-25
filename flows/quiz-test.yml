@@ -1,7 +1,19 @@
+# This is a YAML comment, which is entirely ignored.
+
+# YAML files in Relate are preprocessed with Jinja2.
+# See http://jinja.pocoo.org/docs/latest/templates/ for syntax.
+
+# This brings in a helper function that is used to include pages from
+# separate files. This is optional, but conceivably useful.
 {% from "yaml-macros.yml" import indented_include %}
 
 title: "Incinerator Quiz"
 
+# The "|" character introduces a 'block literal', which means all text indented below
+# it is taken literally. The description property holds text marked up with 'Markdown'.
+# See https://documen.tician.de/relate/content.html#relate-markup for more.
+#
+# So the '#' character below introduces a first-level headline (not a comment).
 description: |
 
     # Incinerator Quiz
@@ -41,86 +53,60 @@ groups:
         id: welcome
         content: |
 
-            #Welcome to the test quiz for Incinerator!
-
+            # Welcome to the test quiz for Incinerator!
             Don't be scared.
 
 -
     id: quiz_start
     shuffle: False
     pages:
+
+    # Pages can be given in-line (like this one) or brought in by including
+    # them from other files, as below.
     -
-        type: ChoiceQuestion
+        type: TextQuestion
         id: power
         value: 5
         prompt: |
 
-            # A Power
+          # A Power
 
-            How much Power(in kwatts) does an incinerate need to start?
+          How much Power(in kwatts) does an incinerate need to start?
 
-        choices:
-            - ~CORRECT~ Two
-            - Three
-            - None of the above
+        answers:
+
+          - type: float
+            value: 2
+            rtol: 1e-4
+          - <plain>Two
+          - <plain>only two
+
     -
-        type: ChoiceQuestion
-        id: partsofincinerator
-        value: 2
-        prompt: |
-
-            # Parts of an incinerator
-
-            which part of Incinerator preevents accidents?
-
-        choices:
-            - ~CORRECT~ Auto power off
-            - Exhaust pipe
-            - Control panel
-            - Frame
-
+        {{ indented_include("questions/partsofincinerator.yml", 8) }}
 
     -
         type: MultipleChoiceQuestion
         id: incineratorloads
         credit_mode: exact
         value: 1
-        shuffle: True
+        shuffle: False
         prompt: |
 
-            #Incinerator loads
+            # Incinerator loads
 
             Which of the following are loads for an incinerator?
 
         choices:
-            - ~CORRECT~ Paper
-            - ~CORRECT~ Cardboard
-            - Diapers
-            - Plastics
-            - ~CORRECT~ Vegitables peels
+
+          - ~CORRECT~ Paper
+          - ~CORRECT~ Cardboard
+          - Diapers
+          - Plastics
+          - ~CORRECT~ Vegitables peels
 
     -
-        type: MultipleChoiceQuestion
-        id: OPincinerator
-        value: 1
-        shuffle: False
-        credit_mode: proportional
-        prompt: |
+        {{ indented_include("questions/OPincinerator.yml", 8) }}
 
-            # Operating an Incinerator
-            which of the following are pre-Operation tasks for an incinerator?
-
-        choices:
-            - ~CORRECT~ Pre-heat the incinerator.
-            - Clean the wiremesh.
-            - Load the content for incineration
-            - ~CORRECT~ Check the ease of pulling out the wire mesh.
-            - Ensure that the exhaust pipe has no obstruction.
-
--
-    id: quiz_tail
-    shuffle: True
-    pages:
     -
         type: SurveyTextQuestion
         id: fear
@@ -130,17 +116,18 @@ groups:
             # Feedback
 
             How did you like our tranning?
+
+
+-
+    id: quiz_tail
+    shuffle: True
+    pages:
+
     -
-        type: TextQuestion
-        id: quarter
-        value: 1
-        widget: textarea
-        prompt: |
-
-        # Which Company designed and sold this incinerator?
-
+        {{ indented_include("questions/lightleader.yml", 8) }}
 
 completion_text: |
 
-     # See you in class!
+    # See you in class!
+
     Thanks for completing the quiz.
