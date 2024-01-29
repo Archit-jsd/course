@@ -15,7 +15,7 @@ pages:
 -
     type: Page
     id: intro
-    content: 
+    content: |
 
         # Let us understand what an incinerator is
         <div class ="well"  markdown="1">
