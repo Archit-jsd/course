@@ -19,12 +19,8 @@ pages:
 
         # Let us understand what an incinerator is
         <div class ="well"  markdown="1">
-            <iframe width="420" height="315" src="https://www.youtube.com/embed/MVYq3tCQ-Tpx3tCQ-Tpx3QWd" frameborder="0" allowtransparency="true" allowFullScreen="allowFullScreen">
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/MVYq3tCQ-Tpx3tCQ-Tpx3QWd" frameborder="0" allowtransparency="true">
             </iframe>
-
-        html.iframe(width="420", height="315", src="https://www.youtube.com/embed/MVYq3tCQ-Tpx3tCQ-Tpx3QWd", title="YouTube video player",  allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture "),`
-            [/
-            quote]
         </div>
         
        
