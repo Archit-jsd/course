@@ -1,4 +1,8 @@
 {% macro indented_include(filename, n) -%}{%- filter indent(n) -%}{%- include filename -%}{%- endfilter %}{%- endmacro %}
+{% macro youtube(id) -%}
+  <iframe width="420" height="315" src="//www.youtube.com/embed/{{id}}" frameborder="0" allowfullscreen>
+  </iframe>
+{%- endmacro %}
 
 {% macro grace_rules(week) -%}
 rules:
@@ -37,4 +41,5 @@ rules:
     -
       credit_percent: 0
 {%- endmacro %}
+
 

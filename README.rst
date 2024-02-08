@@ -1,6 +1,6 @@
-relate-sample
+inducer sample
 =============
 
-This is sample content for `relate
-<https://github.com/inducer/relate>`_. See there for more information.
+This is sample content for 
+ See there for more information.
 
