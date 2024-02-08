@@ -66,11 +66,11 @@ pages:
 
         1.The  incinerator needs to be preheatd to 200 degree Centigrade before the waste to be incinerated is loaded.
 
-        2.you can preheat the incinerator by pressing the start button.
+        2.you can preheat the incinerator by pressing the start button.<img src="repo:images/start.png">
 
-        3.Read the temperature indicator to note the temperature in the chamber.
+        3.Read the temperature indicator <img src="repo:images/tempimg.png"> to note the temperature in the chamber.
 
-        4.Once the chamber has reached the temperature of 200 degrees C switch off by pressing the Power off switch.
+        4.Once the chamber has reached the temperature of 200 degrees C switch off by pressing the Power off switch.<img src="repo:images/stop.png">
        The incinerator will shut off immediately if you open the door without switching the Power off button. 
 
 completion_text: |
