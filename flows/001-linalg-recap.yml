@@ -71,6 +71,7 @@ pages:
         3.Read the temperature indicator <img src="repo:images/tempimg.png" width="50px" height="50px"> to note the temperature in the chamber.
 
         4.Once the chamber has reached the temperature of 200 degrees C switch off by pressing the Power off switch.<img src="repo:images/stop.png">
+        
        The incinerator will shut off immediately if you open the door without switching the Power off button. 
 
 completion_text: |
