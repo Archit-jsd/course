@@ -68,7 +68,7 @@ pages:
 
         2.you can preheat the incinerator by pressing the start button.<img src="repo:images/start.png">
 
-        3.Read the temperature indicator <img src="repo:images/tempimg.png"> to note the temperature in the chamber.
+        3.Read the temperature indicator <img width="10" height="10"src="repo:images/tempimg.png"> to note the temperature in the chamber.
 
         4.Once the chamber has reached the temperature of 200 degrees C switch off by pressing the Power off switch.<img src="repo:images/stop.png">
        The incinerator will shut off immediately if you open the door without switching the Power off button. 
